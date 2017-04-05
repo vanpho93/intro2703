@@ -33,8 +33,12 @@ const Hi = (props) => (
 );
 
 class Box extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: 0 };
+  }
   render() {
-    return <Button title="0"/>
+    return <Button title={this.state.value + ''} onPress={() => this.setState({ value: this.state.value + 1 })}/>
   }
 }
 
