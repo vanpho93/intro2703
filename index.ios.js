@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View, Button } from 'react-native';
+import Box from './Box';
 
 function a() {
   return () => console.log('123');
@@ -31,16 +32,6 @@ const Hi = (props) => (
     <Text>Hi Component {props.name}</Text>
   </View>
 );
-
-class Box extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 0 };
-  }
-  render() {
-    return <Button title={this.state.value + ''} onPress={() => this.setState({ value: this.state.value + 1 })}/>
-  }
-}
 
 class HelloWorldApp extends Component {
   render() {
